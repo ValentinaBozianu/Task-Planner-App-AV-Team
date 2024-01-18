@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Task Manager App</h1>
+    </div>
+    
+    <nav id="mainMenu">
+        <ul>
+            <li><button id="showRegisterForm" class="button">Înregistrare</button></li>
+            <li><button id="showLoginForm" class="button">Conectare</button></li>
+            <li><button id="showTaskSection" class="button">Task-uri</button></li>
+        </ul>
+    </nav>
+
+  
+    <div class="container hidden" id="registerInterface">
+        <h2>Înregistrare Utilizator</h2>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="name">Nume:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Parolă:</label>
+                <input type="password" id="password" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Rol:</label>
+                <select id="role">
+                    <option value="manager">Manager</option>
+                    <option value="executant">Executant</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="managerSelectGroup" style="display: none;">
+                <label for="managerSelect">Manager:</label>
+                <select id="managerSelect">
+                    
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="button">Înregistrează</button>
+            </div>
+        </form>
+    </div>
+    
+
+   
+<div class="container hidden" id="loginInterface">
+    <h2>Conectare</h2>
+    <form id="loginForm" class="form-style">
+        <div class="form-group">
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+            <label for="loginPassword">Parolă:</label>
+            <input type="password" id="loginPassword" placeholder="Parolă" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="button">Conectează-te</button>
+        </div>
+    </form>
+</div>
+
+
+    <div class="container hidden" id="managerInterface">
+
+        <h2>Manager Interface</h2>
+    <form id="createTaskForm">
+        <div class="form-group">
+        <input type="text" id="taskDescription" placeholder="Descriere Task" required>
+        <input type="text" id="taskManager" placeholder="Manager" required>
+        <input type="text" id="taskAssignee" placeholder="Alocă către (email executant)" required>
+        
+        </div>
+        <button type="submit" class="button">Creează Task</button>
+    </form>
+        <h2>Task-uri</h2>
+        <table class="table" id="taskTable">
+            <thead>
+                <tr>
+                    <th>Descriere Task</th>
+                    <th>Manager</th>
+                    <th>Alocat</th>
+                    <th>Stare</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+
+
+nav#mainMenu ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav#mainMenu li {
+  display: inline;
+  margin: 0 10px;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  background: #f1e0f7;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+.header {
+  background: #8e25d3;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.form-style {
+  background: #f2e0ef;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type=text],
+.form-group input[type=email],
+.form-group input[type=password],
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+
+.button, .changeStatusButton{
+  display: inline-block;
+  background: #3498db;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #2980b9;
+}
+
+/* Stilizarea tabelului */
+#taskTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#taskTable th,
+#taskTable td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+#taskTable th {
+  background-color: #3498db;
+  color: #fff;
+}
+
+#taskTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.status-open {
+  color: #e74c3c;
+}
+
+.status-pending {
+  color: #f39c12;
+}
+
+.status-completed {
+  color: #2ecc71;
+}
+
+.status-closed {
+  color: #95a5a6;
+}
+
+.status-btn {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.status-btn:hover {
+  background-color: #2980b9;
+}
+
+.hidden {
+  display: none;
+}
